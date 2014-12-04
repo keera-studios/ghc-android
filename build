@@ -185,7 +185,7 @@ apt-get source libxml2 nettle libidn gsasl
 wget http://snapshot.debian.org/archive/debian/20140823T215802Z/pool/main/g/gnutls26/gnutls26_2.12.23-17.dsc
 wget http://snapshot.debian.org/archive/debian/20140823T215802Z/pool/main/g/gnutls26/gnutls26_2.12.23-17.debian.tar.xz
 wget http://snapshot.debian.org/archive/debian/20130206T153312Z/pool/main/g/gnutls26/gnutls26_2.12.23.orig.tar.bz2
-dpkg-source -x gnutls26_2.12.23-18.dsc
+dpkg-source -x gnutls26_2.12.23-17.dsc
 pushd gsasl*
 patch -p1 <$BASEDIR/patches/gsasl-avoid-memxor-conflict.patch
 ./configure --prefix="$NDK_ADDON_PREFIX" --host=$NDK_TARGET --build=$BUILD_ARCH --with-build-cc=$BUILD_GCC --enable-static --disable-shared
